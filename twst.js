@@ -25,13 +25,18 @@ chromeOptions.addArguments("--disable-popup-blocking");
 chromeOptions.addArguments("--disable-default-apps");
 chromeOptions.addArguments("--disable-infobars");
 
-chromeOptions.addArguments("--browser.download.folderList=2");
-chromeOptions.addArguments("--browser.helperApps.neverAsk.saveToDisk=image/jpg");
-chromeOptions.addArguments("--browser.download.dir=E:\\mySeleniumDownloads");
+// chromeOptions.addArguments("--browser.download.folderList=2");
+// chromeOptions.addArguments("--browser.helperApps.neverAsk.saveToDisk=image/jpg");
+chromeOptions.addArguments("user-data-dir=C:\Users\estel\AppData\Local\Google\Chrome\User Data\Default")
+// chromeOptions.addArguments("--browser.download.dir=E:\\mySeleniumDownloads");
+
+// chromeOptions.setUserPreferences('')
 
 driver = new webdriver.Builder()
              .forBrowser("chrome")
              .setChromeOptions(chromeOptions)
              .build();
 
-driver.get('https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2019-financial-year-provisional/Download-data/annual-enterprise-survey-2019-financial-year-provisional-csv.csv');
+// driver.get('https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2019-financial-year-provisional/Download-data/annual-enterprise-survey-2019-financial-year-provisional-csv.csv');
+// driver.get('http://google.com')
+driver.get('chrome://version');
