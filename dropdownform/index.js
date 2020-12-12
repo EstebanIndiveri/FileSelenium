@@ -28,7 +28,6 @@ async function dropdownForm(){
         await select4.click();
         await driver.findElement(By.xpath("//select[@formcontrolname='select4']/option[@value='audi']")).click();
         // select4.click();
-
         await driver.findElement(By.xpath("//button[@id='submit']")).click();
 
     } catch (error) {
